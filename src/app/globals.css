@@ -1,26 +1,79 @@
+/* StrawHatDevs brand fonts */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* StrawHatDevs brand palette — light mode */
+    --background: 248 253 255;           /* #F8FDFF shd-white */
+    --foreground: 6 19 31;               /* #06131F shd-midnight */
+    --card: 255 255 255;
+    --card-foreground: 6 19 31;
+    --popover: 255 255 255;
+    --popover-foreground: 6 19 31;
+    --primary: 25 215 193;               /* #19D7C1 shd-teal */
+    --primary-foreground: 6 19 31;       /* dark text on teal */
+    --secondary: 235 246 245;
+    --secondary-foreground: 6 19 31;
+    --muted: 235 246 245;
+    --muted-foreground: 0 102 111;       /* #00666F shd-teal-dark */
+    --accent: 247 198 72;                /* #F7C648 shd-gold */
+    --accent-foreground: 6 19 31;
+    --destructive: 220 38 38;
+    --destructive-foreground: 255 255 255;
+    --border: 209 236 234;
+    --input: 209 236 234;
+    --ring: 25 215 193;                  /* teal focus ring */
+    --radius: 1rem;
+    --success: 5 150 105;
+    --warning: 217 119 6;
+    /* Brand tokens exposed */
+    --shd-midnight: #06131F;
+    --shd-ocean: #0B2236;
+    --shd-teal: #19D7C1;
+    --shd-teal-dark: #00666F;
+    --shd-gold: #F7C648;
+    --shd-sand: #FFF2A8;
+    --shd-ember: #8E420E;
+    --shd-white: #F8FDFF;
+  }
+
+  .dark {
+    /* StrawHatDevs brand palette — dark mode (natural habitat) */
+    --background: 6 19 31;              /* #06131F shd-midnight */
+    --foreground: 248 253 255;          /* #F8FDFF shd-white */
+    --card: 11 34 54;                   /* #0B2236 shd-ocean */
+    --card-foreground: 248 253 255;
+    --popover: 11 34 54;
+    --popover-foreground: 248 253 255;
+    --primary: 25 215 193;              /* #19D7C1 shd-teal */
+    --primary-foreground: 6 19 31;
+    --secondary: 15 32 48;
+    --secondary-foreground: 248 253 255;
+    --muted: 15 32 48;
+    --muted-foreground: 125 185 180;
+    --accent: 247 198 72;               /* #F7C648 shd-gold */
+    --accent-foreground: 6 19 31;
+    --destructive: 239 68 68;
+    --destructive-foreground: 255 255 255;
+    --border: 25 55 75;
+    --input: 25 55 75;
+    --ring: 25 215 193;
+    --success: 16 185 129;
+    --warning: 247 198 72;              /* gold as warning in dark */
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  }
+  code, kbd, samp, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+  }
 }
