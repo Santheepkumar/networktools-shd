@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 620" role="img" aria-label="Straw Hat Devs primary horizontal logo"><title>Straw Hat Devs primary horizontal logo</title><svg x="25" y="42" width="536" height="536" viewBox="0 0 1024 1024">
+  <title id="title">StrawHatDevs Code Crown — 3D Angled Edition</title>
+  <desc id="desc">A dimensional golden straw hat tilted upward to the right, with a raised teal band and beveled code brackets, designed as a circular developer-channel avatar.</desc>
+
+  <defs>
+    <radialGradient id="background" cx="38%" cy="30%" r="82%">
+      <stop offset="0" stop-color="#1B405D"/>
+      <stop offset="0.62" stop-color="#0B2236"/>
+      <stop offset="1" stop-color="#06131F"/>
+    </radialGradient>
+    <linearGradient id="crownGold" x1="0.08" y1="0.06" x2="0.94" y2="0.9">
+      <stop offset="0" stop-color="#FFF2A8"/>
+      <stop offset="0.2" stop-color="#FFE071"/>
+      <stop offset="0.52" stop-color="#F5BD3E"/>
+      <stop offset="0.8" stop-color="#D9871B"/>
+      <stop offset="1" stop-color="#A84C0D"/>
+    </linearGradient>
+    <linearGradient id="brimGold" x1="0.08" y1="0.05" x2="0.9" y2="0.95">
+      <stop offset="0" stop-color="#FFE890"/>
+      <stop offset="0.35" stop-color="#FBC64D"/>
+      <stop offset="0.72" stop-color="#E79A23"/>
+      <stop offset="1" stop-color="#B7560D"/>
+    </linearGradient>
+    <linearGradient id="bandTeal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#007F83"/>
+      <stop offset="0.22" stop-color="#13C8B7"/>
+      <stop offset="0.52" stop-color="#28E2CA"/>
+      <stop offset="0.82" stop-color="#08AFA8"/>
+      <stop offset="1" stop-color="#00666F"/>
+    </linearGradient>
+    <linearGradient id="brimEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9A4A10"/>
+      <stop offset="0.5" stop-color="#D17B17"/>
+      <stop offset="1" stop-color="#8C3E0C"/>
+    </linearGradient>
+    <filter id="hatShadow" x="-25%" y="-25%" width="150%" height="170%">
+      <feDropShadow dx="0" dy="30" stdDeviation="24" flood-color="#000812" flood-opacity="0.68"/>
+    </filter>
+    <filter id="iconGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="5" flood-color="#002A35" flood-opacity="0.85"/>
+    </filter>
+    <radialGradient id="crownGloss" cx="30%" cy="18%" r="78%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.48"/>
+      <stop offset="0.38" stop-color="#FFF5BE" stop-opacity="0.12"/>
+      <stop offset="0.72" stop-color="#7A2F06" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#6B2705" stop-opacity="0.38"/>
+    </radialGradient>
+    <linearGradient id="bandGloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B5FFF4" stop-opacity="0.72"/>
+      <stop offset="0.2" stop-color="#4EF1DC" stop-opacity="0.18"/>
+      <stop offset="0.72" stop-color="#003D4B" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#002A38" stop-opacity="0.48"/>
+    </linearGradient>
+    <clipPath id="crownClip">
+      <path d="M321 603C331 493 348 376 393 297C420 249 461 224 512 224C563 224 604 249 631 297C676 376 693 493 703 603Z"/>
+    </clipPath>
+    <clipPath id="brimClip">
+      <path d="M512 571C706 571 848 624 875 702C841 787 699 838 512 838C325 838 183 787 149 702C176 624 318 571 512 571Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Circular YouTube-avatar field -->
+  <circle cx="512" cy="512" r="480" fill="url(#background)"/>
+  <circle cx="512" cy="512" r="451" fill="none" stroke="#2A5870" stroke-width="5" opacity="0.8"/>
+  <circle cx="512" cy="512" r="425" fill="none" stroke="#10CDBA" stroke-width="2" opacity="0.12"/>
+
+  <!-- Seven-degree tilt inspired by the natural angle of a photographed hat -->
+  <g transform="rotate(-7 512 600)">
+  <g filter="url(#hatShadow)">
+    <!-- Ground contact shadow and visible brim thickness create depth -->
+    <ellipse cx="520" cy="806" rx="330" ry="72" fill="#000A12" opacity="0.42"/>
+    <path d="M151 706C190 804 334 863 512 863C690 863 834 804 873 706L864 750C807 842 674 883 512 883C350 883 217 842 160 750Z"
+          fill="#713008" stroke="#4D1E04" stroke-width="15" stroke-linejoin="round"/>
+    <!-- Brim sits behind the crown -->
+    <path d="M512 571C706 571 848 624 875 702C841 787 699 838 512 838C325 838 183 787 149 702C176 624 318 571 512 571Z"
+          fill="url(#brimGold)" stroke="#8E420E" stroke-width="21" stroke-linejoin="round"/>
+
+    <!-- Broad, simplified straw weave -->
+    <g clip-path="url(#brimClip)" fill="none" stroke-linecap="round">
+      <path d="M174 669C345 712 679 712 850 669" stroke="#A55A14" stroke-width="12" opacity="0.3"/>
+      <path d="M174 735C348 782 676 782 850 735" stroke="#9A4C10" stroke-width="14" opacity="0.28"/>
+      <path d="M303 598L269 764M390 580L371 806M634 580L653 806M721 598L755 764"
+            stroke="#A85A14" stroke-width="11" opacity="0.22"/>
+    </g>
+    <path d="M166 712C252 772 375 798 512 798C649 798 772 772 858 712"
+          fill="none" stroke="url(#brimEdge)" stroke-width="24" stroke-linecap="round" opacity="0.82"/>
+    <path d="M196 650C305 608 435 596 561 605" fill="none" stroke="#FFF0A8" stroke-width="18" stroke-linecap="round" opacity="0.45"/>
+    <path d="M203 758C342 819 640 830 806 760" fill="none" stroke="#7E3207" stroke-width="15" stroke-linecap="round" opacity="0.34"/>
+
+    <!-- Rounded crown -->
+    <path d="M321 603C331 493 348 376 393 297C420 249 461 224 512 224C563 224 604 249 631 297C676 376 693 493 703 603Z"
+          fill="url(#crownGold)" stroke="#9B4E12" stroke-width="21" stroke-linejoin="round"/>
+    <path d="M321 603C331 493 348 376 393 297C420 249 461 224 512 224C563 224 604 249 631 297C676 376 693 493 703 603Z"
+          fill="url(#crownGloss)"/>
+
+    <!-- Crown weave: sparse enough to remain clean when small -->
+    <g clip-path="url(#crownClip)" fill="none" stroke-linecap="round">
+      <path d="M367 370C447 396 577 396 657 370M342 465C438 494 586 494 682 465"
+            stroke="#A55C16" stroke-width="12" opacity="0.3"/>
+      <path d="M421 255C454 351 456 486 455 594M512 231V590M603 255C570 351 568 486 569 594"
+            stroke="#9E5513" stroke-width="11" opacity="0.24"/>
+      <path d="M405 283C432 258 466 246 512 246C558 246 592 258 619 283"
+            stroke="#FFF1A5" stroke-width="14" opacity="0.36"/>
+      <path d="M390 315C414 274 451 250 490 246" stroke="#FFF8D2" stroke-width="18" opacity="0.5"/>
+    </g>
+
+    <!-- Distinctive teal code band -->
+    <path d="M303 532C432 564 592 564 721 532L725 651C592 688 432 688 299 651Z"
+          fill="#003643" opacity="0.82"/>
+    <path d="M315 515C430 546 594 546 709 515L721 636C592 669 432 669 303 636Z"
+          fill="url(#bandTeal)" stroke="#053846" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M315 515C430 546 594 546 709 515L721 636C592 669 432 669 303 636Z"
+          fill="url(#bandGloss)"/>
+    <path d="M326 537C438 563 586 563 698 537" fill="none" stroke="#B1FFF2" stroke-width="10" stroke-linecap="round" opacity="0.56"/>
+
+    <!-- Extruded shadow makes the code mark feel raised -->
+    <g fill="none" stroke="#006272" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 11)">
+      <path d="M448 566L397 600L448 634"/>
+      <path d="M576 566L627 600L576 634"/>
+      <path d="M548 548L476 651"/>
+    </g>
+    <!-- Large, optically centred code mark -->
+    <g fill="none" stroke="#F8FDFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+      <path d="M448 566L397 600L448 634"/>
+      <path d="M576 566L627 600L576 634"/>
+      <path d="M548 548L476 651"/>
+    </g>
+    <g fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.65">
+      <path d="M442 568L402 596M582 568L622 596M542 551L478 644"/>
+    </g>
+  </g>
+  </g>
+
+  <!-- Small signature spark balances the silhouette -->
+  <path d="M790 232L801 263L832 274L801 285L790 316L779 285L748 274L779 263Z" fill="#18D5C0"/>
+  <circle cx="728" cy="227" r="7" fill="#FFE274" opacity="0.9"/>
+</svg><svg x="610" y="145" width="1540" height="308" viewBox="0 0 1600 320">
+  <defs
+     id="defs16" />
+  <title
+     id="title2">Straw Hat Devs clean wordmark</title>
+  <desc
+     id="desc4">Standalone Straw Hat Devs wordmark without descriptor.</desc>
+  <g
+     font-family="'DejaVu Sans'"
+     font-weight="700"
+     id="g10">
+    <g
+       aria-label="Straw Hat"
+       id="text6"
+       style="font-size:184px;letter-spacing:-5;fill:#0b2236">
+      <path
+         d="m 160.23828,90.085937 v 28.390623 q -11.05078,-4.9414 -21.5625,-7.45703 -10.51172,-2.51562 -19.85547,-2.51562 -12.39843,0 -18.32812,3.41406 -5.92969,3.41406 -5.92969,10.60156 0,5.39063 3.953125,8.44531 4.042965,2.96485 14.554685,5.1211 l 14.73438,2.96484 q 22.37109,4.49219 31.80468,13.65625 9.4336,9.16406 9.4336,26.05469 0,22.1914 -13.20703,33.0625 -13.11719,10.78125 -40.16016,10.78125 -12.75781,0 -25.605468,-2.42578 -12.847656,-2.42578 -25.695312,-7.1875 v -29.19922 q 12.847656,6.82812 24.796875,10.33203 12.039065,3.41406 23.179685,3.41406 11.32032,0 17.33985,-3.77344 6.01953,-3.77343 6.01953,-10.78125 0,-6.28906 -4.13282,-9.70312 -4.04296,-3.41406 -16.26171,-6.10938 l -13.38672,-2.96484 q -20.125003,-4.3125 -29.468753,-13.74609 -9.253906,-9.4336 -9.253906,-25.42578 0,-20.03516 12.9375,-30.81641 12.9375,-10.78125 37.195309,-10.78125 11.05079,0 22.73047,1.707031 11.67969,1.617188 24.16797,4.941406 z"
+         id="path18" />
+      <path
+         d="M 228.10156,90.804687 V 119.375 h 33.15235 v 23 h -33.15235 v 42.67578 q 0,7.00781 2.78516,9.52344 Q 233.67187,197 241.9375,197 h 16.53125 v 23 h -27.58203 q -19.04688,0 -27.04297,-7.90625 -7.90625,-7.99609 -7.90625,-27.04297 V 142.375 h -15.99219 v -23 H 195.9375 V 90.804687 Z"
+         id="path20" />
+      <path
+         d="m 350.67969,146.77734 q -4.22266,-1.97656 -8.44532,-2.875 -4.13281,-0.98828 -8.35546,-0.98828 -12.39844,0 -19.13672,7.9961 -6.64844,7.90625 -6.64844,22.73046 V 220 H 275.92969 V 119.375 h 32.16406 v 16.53125 q 6.19922,-9.88281 14.19531,-14.375 8.08594,-4.58203 19.31641,-4.58203 1.61719,0 3.5039,0.17969 1.88672,0.0898 5.48047,0.53906 z"
+         id="path22" />
+      <path
+         d="m 406.77344,174.71875 q -10.0625,0 -15.1836,3.41406 -5.03125,3.41406 -5.03125,10.0625 0,6.10938 4.04297,9.61328 4.13281,3.41407 11.41016,3.41407 9.07422,0 15.27344,-6.46875 6.19921,-6.5586 6.19921,-16.35157 v -3.68359 z m 49.14453,-12.12891 V 220 h -32.4336 v -14.91406 q -6.46875,9.16406 -14.55468,13.38672 -8.08594,4.13281 -19.67578,4.13281 -15.63282,0 -25.42579,-9.07422 -9.70312,-9.16406 -9.70312,-23.71875 0,-17.69922 12.12891,-25.96484 12.21875,-8.26563 38.27343,-8.26563 h 18.95703 v -2.51562 q 0,-7.63672 -6.01953,-11.14063 -6.01953,-3.59375 -18.77734,-3.59375 -10.33203,0 -19.22656,2.06641 -8.89453,2.0664 -16.53125,6.19922 v -24.52735 q 10.33203,-2.51562 20.7539,-3.77343 10.42188,-1.34766 20.84375,-1.34766 27.22266,0 39.26172,10.78125 12.12891,10.6914 12.12891,34.85937 z"
+         id="path24" />
+      <path
+         d="m 471.85156,119.375 h 31.26563 l 16.89062,69.35937 16.98047,-69.35937 h 26.86328 l 16.89063,68.64062 16.98047,-68.64062 h 31.26562 L 602.48437,220 h -35.1289 L 550.375,150.82031 533.48437,220 h -35.1289 z"
+         id="path26" />
+      <path
+         d="m 706.31641,85.863281 h 34.58984 V 136.98437 H 791.9375 V 85.863281 h 34.58984 V 220 H 791.9375 V 163.12891 H 740.90625 V 220 h -34.58984 z"
+         id="path28" />
+      <path
+         d="m 898.97266,174.71875 q -10.0625,0 -15.1836,3.41406 -5.03125,3.41406 -5.03125,10.0625 0,6.10938 4.04297,9.61328 4.13281,3.41407 11.41016,3.41407 9.07422,0 15.27343,-6.46875 6.19922,-6.5586 6.19922,-16.35157 v -3.68359 z m 49.14453,-12.12891 V 220 h -32.4336 v -14.91406 q -6.46875,9.16406 -14.55468,13.38672 -8.08594,4.13281 -19.67579,4.13281 -15.63281,0 -25.42578,-9.07422 -9.70312,-9.16406 -9.70312,-23.71875 0,-17.69922 12.1289,-25.96484 12.21875,-8.26563 38.27344,-8.26563 h 18.95703 v -2.51562 q 0,-7.63672 -6.01953,-11.14063 -6.01953,-3.59375 -18.77734,-3.59375 -10.33203,0 -19.22656,2.06641 -8.89454,2.0664 -16.53125,6.19922 v -24.52735 q 10.33203,-2.51562 20.7539,-3.77343 10.42188,-1.34766 20.84375,-1.34766 27.22266,0 39.26172,10.78125 12.12891,10.6914 12.12891,34.85937 z"
+         id="path30" />
+      <path
+         d="M 1008.1641,90.804687 V 119.375 h 33.1523 v 23 h -33.1523 v 42.67578 q 0,7.00781 2.7851,9.52344 Q 1013.7344,197 1022,197 h 16.5313 v 23 h -27.5821 q -19.04686,0 -27.04295,-7.90625 Q 976,204.09766 976,185.05078 V 142.375 h -15.99219 v -23 H 976 V 90.804687 Z"
+         id="path32" />
+    </g>
+    <g
+       aria-label="Devs"
+       id="text8"
+       style="font-size:184px;letter-spacing:-5;fill:#19d7c1">
+      <path
+         d="m 1076.6804,112.00781 v 81.84766 h 12.3985 q 21.2031,0 32.3437,-10.51172 11.2305,-10.51172 11.2305,-30.54688 0,-19.94531 -11.1406,-30.36718 -11.1407,-10.42188 -32.4336,-10.42188 z m -34.5898,-26.144529 h 36.4765 q 30.5469,0 45.461,4.402344 15.0039,4.3125 25.6953,14.734375 9.4336,9.07422 14.0156,20.93359 4.582,11.85938 4.582,26.86328 0,15.1836 -4.582,27.13282 -4.582,11.85937 -14.0156,20.93359 -10.7813,10.42188 -25.875,14.82422 Q 1108.7546,220 1078.5671,220 h -36.4765 z"
+         id="path35" />
+      <path
+         d="m 1288.8328,169.41797 v 9.16406 h -75.1993 q 1.168,11.32031 8.1758,16.98047 7.0078,5.66016 19.586,5.66016 10.1523,0 20.7539,-2.96485 10.6914,-3.05469 21.9218,-9.16406 v 24.79687 q -11.4101,4.3125 -22.8203,6.46875 -11.4101,2.2461 -22.8203,2.2461 -27.3125,0 -42.4961,-13.83594 -15.0937,-13.92578 -15.0937,-38.99219 0,-24.61718 14.8242,-38.72265 14.9141,-14.10547 40.9687,-14.10547 23.7188,0 37.9141,14.28515 14.2852,14.28516 14.2852,38.1836 z m -33.0625,-10.69141 q 0,-9.16406 -5.3907,-14.73437 -5.3007,-5.66016 -13.9257,-5.66016 -9.3438,0 -15.1836,5.30078 -5.8399,5.21094 -7.2774,15.09375 z"
+         id="path37" />
+      <path
+         d="m 1295.5125,119.375 h 32.164 l 25.0664,69.53906 24.9766,-69.53906 h 32.2539 L 1370.3523,220 h -35.3086 z"
+         id="path39" />
+      <path
+         d="m 1501.7351,122.51953 v 24.4375 q -10.332,-4.3125 -19.9453,-6.46875 -9.6133,-2.15625 -18.1484,-2.15625 -9.1641,0 -13.6563,2.33594 -4.4023,2.24609 -4.4023,7.00781 0,3.86328 3.3242,5.92969 3.414,2.0664 12.1289,3.05469 l 5.6601,0.80859 q 24.7071,3.14453 33.2422,10.33203 8.5352,7.1875 8.5352,22.55078 0,16.08203 -11.8594,24.16797 -11.8594,8.08594 -35.3984,8.08594 -9.9727,0 -20.6641,-1.61719 -10.6015,-1.52734 -21.832,-4.67187 v -24.4375 q 9.6133,4.67187 19.6758,7.00781 10.1523,2.33594 20.5742,2.33594 9.4336,0 14.1953,-2.60547 4.7617,-2.60547 4.7617,-7.72657 0,-4.3125 -3.3242,-6.3789 -3.2344,-2.15625 -13.0273,-3.32422 l -5.6602,-0.71875 q -21.4727,-2.69531 -30.0977,-9.97266 -8.625,-7.27734 -8.625,-22.10156 0,-15.99219 10.961,-23.71875 10.9609,-7.72656 33.6015,-7.72656 8.8946,0 18.6875,1.34766 9.793,1.34765 21.293,4.22265 z"
+         id="path41" />
+    </g>
+  </g>
+</svg></svg>

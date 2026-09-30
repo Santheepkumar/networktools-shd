@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Straw Hat Devs flat icon"><title>Straw Hat Devs flat icon</title><desc>Simplified flat-color version of the angled code crown.</desc>
+    <defs>
+      <linearGradient id="flatGold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFF2A8"/><stop offset=".48" stop-color="#F7C648"/><stop offset="1" stop-color="#D8871D"/></linearGradient>
+      <linearGradient id="flatTeal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00666F"/><stop offset=".5" stop-color="#19D7C1"/><stop offset="1" stop-color="#079D9B"/></linearGradient>
+      <filter id="flatShadow" x="-25%" y="-25%" width="150%" height="170%"><feDropShadow dx="0" dy="19" stdDeviation="17" flood-color="#000812" flood-opacity=".5"/></filter>
+    </defs>
+    <circle cx="512" cy="512" r="480" fill="#0B2236"/><circle cx="512" cy="512" r="451" fill="none" stroke="#19D7C1" stroke-width="5" opacity=".38"/>
+    <g transform="rotate(-7 512 600)" filter="url(#flatShadow)">
+      <path d="M512 571C706 571 848 624 875 702C841 787 699 838 512 838C325 838 183 787 149 702C176 624 318 571 512 571Z" fill="url(#flatGold)" stroke="#8E420E" stroke-width="24"/>
+      <path d="M321 603C331 493 348 376 393 297C420 249 461 224 512 224C563 224 604 249 631 297C676 376 693 493 703 603Z" fill="url(#flatGold)" stroke="#8E420E" stroke-width="24"/>
+      <path d="M315 515C430 546 594 546 709 515L721 636C592 669 432 669 303 636Z" fill="url(#flatTeal)" stroke="#053846" stroke-width="20"/>
+      <g fill="none" stroke="#F8FDFF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M448 566L397 600L448 634M576 566L627 600L576 634M548 548L476 651"/>
+      </g>
+    </g></svg>

@@ -1,0 +1,24 @@
+{
+  "brand": "Straw Hat Devs",
+  "colors": {
+    "midnight": "#06131F",
+    "ocean": "#0B2236",
+    "teal": "#19D7C1",
+    "tealDark": "#00666F",
+    "gold": "#F7C648",
+    "sand": "#FFF2A8",
+    "ember": "#8E420E",
+    "white": "#F8FDFF"
+  },
+  "typography": {
+    "display": "Space Grotesk",
+    "body": "Inter",
+    "code": "JetBrains Mono"
+  },
+  "usage": {
+    "clearSpace": "One code-bracket width around the mark",
+    "minimumDigitalIcon": "32px",
+    "minimumDigitalLockup": "180px",
+    "minimumPrintIcon": "12mm"
+  }
+}

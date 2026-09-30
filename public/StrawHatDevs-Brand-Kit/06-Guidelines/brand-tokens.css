@@ -1,0 +1,16 @@
+:root {
+  --shd-midnight: #06131F;
+  --shd-ocean: #0B2236;
+  --shd-teal: #19D7C1;
+  --shd-teal-dark: #00666F;
+  --shd-gold: #F7C648;
+  --shd-sand: #FFF2A8;
+  --shd-ember: #8E420E;
+  --shd-white: #F8FDFF;
+  --shd-font-display: "Space Grotesk", "DejaVu Sans", sans-serif;
+  --shd-font-body: "Inter", "DejaVu Sans", sans-serif;
+  --shd-font-code: "JetBrains Mono", "DejaVu Sans Mono", monospace;
+  --shd-radius-sm: 8px;
+  --shd-radius-md: 16px;
+  --shd-radius-round: 999px;
+}

@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">StrawHatDevs Code Crown — 3D Angled Edition</title>
+  <desc id="desc">A dimensional golden straw hat tilted upward to the right, with a raised teal band and beveled code brackets, designed as a circular developer-channel avatar.</desc>
+
+  <defs>
+    <radialGradient id="background" cx="38%" cy="30%" r="82%">
+      <stop offset="0" stop-color="#1B405D"/>
+      <stop offset="0.62" stop-color="#0B2236"/>
+      <stop offset="1" stop-color="#06131F"/>
+    </radialGradient>
+    <linearGradient id="crownGold" x1="0.08" y1="0.06" x2="0.94" y2="0.9">
+      <stop offset="0" stop-color="#FFF2A8"/>
+      <stop offset="0.2" stop-color="#FFE071"/>
+      <stop offset="0.52" stop-color="#F5BD3E"/>
+      <stop offset="0.8" stop-color="#D9871B"/>
+      <stop offset="1" stop-color="#A84C0D"/>
+    </linearGradient>
+    <linearGradient id="brimGold" x1="0.08" y1="0.05" x2="0.9" y2="0.95">
+      <stop offset="0" stop-color="#FFE890"/>
+      <stop offset="0.35" stop-color="#FBC64D"/>
+      <stop offset="0.72" stop-color="#E79A23"/>
+      <stop offset="1" stop-color="#B7560D"/>
+    </linearGradient>
+    <linearGradient id="bandTeal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#007F83"/>
+      <stop offset="0.22" stop-color="#13C8B7"/>
+      <stop offset="0.52" stop-color="#28E2CA"/>
+      <stop offset="0.82" stop-color="#08AFA8"/>
+      <stop offset="1" stop-color="#00666F"/>
+    </linearGradient>
+    <linearGradient id="brimEdge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9A4A10"/>
+      <stop offset="0.5" stop-color="#D17B17"/>
+      <stop offset="1" stop-color="#8C3E0C"/>
+    </linearGradient>
+    <filter id="hatShadow" x="-25%" y="-25%" width="150%" height="170%">
+      <feDropShadow dx="0" dy="30" stdDeviation="24" flood-color="#000812" flood-opacity="0.68"/>
+    </filter>
+    <filter id="iconGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="5" flood-color="#002A35" flood-opacity="0.85"/>
+    </filter>
+    <radialGradient id="crownGloss" cx="30%" cy="18%" r="78%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.48"/>
+      <stop offset="0.38" stop-color="#FFF5BE" stop-opacity="0.12"/>
+      <stop offset="0.72" stop-color="#7A2F06" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#6B2705" stop-opacity="0.38"/>
+    </radialGradient>
+    <linearGradient id="bandGloss" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#B5FFF4" stop-opacity="0.72"/>
+      <stop offset="0.2" stop-color="#4EF1DC" stop-opacity="0.18"/>
+      <stop offset="0.72" stop-color="#003D4B" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#002A38" stop-opacity="0.48"/>
+    </linearGradient>
+    <clipPath id="crownClip">
+      <path d="M321 603C331 493 348 376 393 297C420 249 461 224 512 224C563 224 604 249 631 297C676 376 693 493 703 603Z"/>
+    </clipPath>
+    <clipPath id="brimClip">
+      <path d="M512 571C706 571 848 624 875 702C841 787 699 838 512 838C325 838 183 787 149 702C176 624 318 571 512 571Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Circular YouTube-avatar field -->
+  <circle cx="512" cy="512" r="480" fill="url(#background)"/>
+  <circle cx="512" cy="512" r="451" fill="none" stroke="#2A5870" stroke-width="5" opacity="0.8"/>
+  <circle cx="512" cy="512" r="425" fill="none" stroke="#10CDBA" stroke-width="2" opacity="0.12"/>
+
+  <!-- Seven-degree tilt inspired by the natural angle of a photographed hat -->
+  <g transform="rotate(-7 512 600)">
+  <g filter="url(#hatShadow)">
+    <!-- Ground contact shadow and visible brim thickness create depth -->
+    <ellipse cx="520" cy="806" rx="330" ry="72" fill="#000A12" opacity="0.42"/>
+    <path d="M151 706C190 804 334 863 512 863C690 863 834 804 873 706L864 750C807 842 674 883 512 883C350 883 217 842 160 750Z"
+          fill="#713008" stroke="#4D1E04" stroke-width="15" stroke-linejoin="round"/>
+    <!-- Brim sits behind the crown -->
+    <path d="M512 571C706 571 848 624 875 702C841 787 699 838 512 838C325 838 183 787 149 702C176 624 318 571 512 571Z"
+          fill="url(#brimGold)" stroke="#8E420E" stroke-width="21" stroke-linejoin="round"/>
+
+    <!-- Broad, simplified straw weave -->
+    <g clip-path="url(#brimClip)" fill="none" stroke-linecap="round">
+      <path d="M174 669C345 712 679 712 850 669" stroke="#A55A14" stroke-width="12" opacity="0.3"/>
+      <path d="M174 735C348 782 676 782 850 735" stroke="#9A4C10" stroke-width="14" opacity="0.28"/>
+      <path d="M303 598L269 764M390 580L371 806M634 580L653 806M721 598L755 764"
+            stroke="#A85A14" stroke-width="11" opacity="0.22"/>
+    </g>
+    <path d="M166 712C252 772 375 798 512 798C649 798 772 772 858 712"
+          fill="none" stroke="url(#brimEdge)" stroke-width="24" stroke-linecap="round" opacity="0.82"/>
+    <path d="M196 650C305 608 435 596 561 605" fill="none" stroke="#FFF0A8" stroke-width="18" stroke-linecap="round" opacity="0.45"/>
+    <path d="M203 758C342 819 640 830 806 760" fill="none" stroke="#7E3207" stroke-width="15" stroke-linecap="round" opacity="0.34"/>
+
+    <!-- Rounded crown -->
+    <path d="M321 603C331 493 348 376 393 297C420 249 461 224 512 224C563 224 604 249 631 297C676 376 693 493 703 603Z"
+          fill="url(#crownGold)" stroke="#9B4E12" stroke-width="21" stroke-linejoin="round"/>
+    <path d="M321 603C331 493 348 376 393 297C420 249 461 224 512 224C563 224 604 249 631 297C676 376 693 493 703 603Z"
+          fill="url(#crownGloss)"/>
+
+    <!-- Crown weave: sparse enough to remain clean when small -->
+    <g clip-path="url(#crownClip)" fill="none" stroke-linecap="round">
+      <path d="M367 370C447 396 577 396 657 370M342 465C438 494 586 494 682 465"
+            stroke="#A55C16" stroke-width="12" opacity="0.3"/>
+      <path d="M421 255C454 351 456 486 455 594M512 231V590M603 255C570 351 568 486 569 594"
+            stroke="#9E5513" stroke-width="11" opacity="0.24"/>
+      <path d="M405 283C432 258 466 246 512 246C558 246 592 258 619 283"
+            stroke="#FFF1A5" stroke-width="14" opacity="0.36"/>
+      <path d="M390 315C414 274 451 250 490 246" stroke="#FFF8D2" stroke-width="18" opacity="0.5"/>
+    </g>
+
+    <!-- Distinctive teal code band -->
+    <path d="M303 532C432 564 592 564 721 532L725 651C592 688 432 688 299 651Z"
+          fill="#003643" opacity="0.82"/>
+    <path d="M315 515C430 546 594 546 709 515L721 636C592 669 432 669 303 636Z"
+          fill="url(#bandTeal)" stroke="#053846" stroke-width="18" stroke-linejoin="round"/>
+    <path d="M315 515C430 546 594 546 709 515L721 636C592 669 432 669 303 636Z"
+          fill="url(#bandGloss)"/>
+    <path d="M326 537C438 563 586 563 698 537" fill="none" stroke="#B1FFF2" stroke-width="10" stroke-linecap="round" opacity="0.56"/>
+
+    <!-- Extruded shadow makes the code mark feel raised -->
+    <g fill="none" stroke="#006272" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" transform="translate(0 11)">
+      <path d="M448 566L397 600L448 634"/>
+      <path d="M576 566L627 600L576 634"/>
+      <path d="M548 548L476 651"/>
+    </g>
+    <!-- Large, optically centred code mark -->
+    <g fill="none" stroke="#F8FDFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" filter="url(#iconGlow)">
+      <path d="M448 566L397 600L448 634"/>
+      <path d="M576 566L627 600L576 634"/>
+      <path d="M548 548L476 651"/>
+    </g>
+    <g fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" opacity="0.65">
+      <path d="M442 568L402 596M582 568L622 596M542 551L478 644"/>
+    </g>
+  </g>
+  </g>
+
+  <!-- Small signature spark balances the silhouette -->
+  <path d="M790 232L801 263L832 274L801 285L790 316L779 285L748 274L779 263Z" fill="#18D5C0"/>
+  <circle cx="728" cy="227" r="7" fill="#FFE274" opacity="0.9"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="Straw Hat Devs black icon"><title>Straw Hat Devs black icon</title><desc>Single-color black icon for print and production.</desc>
+    <defs>
+      <mask id="monoCut"><rect width="1024" height="1024" fill="black"/>
+        <g transform="rotate(-7 512 600)" fill="white">
+          <path d="M512 571C706 571 848 624 875 702C841 787 699 838 512 838C325 838 183 787 149 702C176 624 318 571 512 571Z"/>
+          <path d="M321 603C331 493 348 376 393 297C420 249 461 224 512 224C563 224 604 249 631 297C676 376 693 493 703 603Z"/>
+          <path d="M315 515C430 546 594 546 709 515L721 636C592 669 432 669 303 636Z"/>
+          <g fill="none" stroke="black" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"><path d="M448 566L397 600L448 634M576 566L627 600L576 634M548 548L476 651"/></g>
+        </g>
+      </mask>
+    </defs>
+    
+    <rect width="1024" height="1024" fill="#000000" mask="url(#monoCut)"/></svg>
