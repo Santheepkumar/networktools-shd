@@ -1,69 +1,75 @@
-import Image from "next/image";
+import { TOOLS, CATEGORIES, CATEGORY_ORDER, getToolsByCategory } from '@/lib/tools-registry'
+import { ToolCard } from '@/components/dashboard/tool-card'
+import { Search } from 'lucide-react'
 
-export default function Home() {
+
+export const metadata = {
+  title: 'Network Tools by StrawHatDevs — DNS, Security & HTTP Diagnostics',
+  description: '22+ free network diagnostic tools by StrawHatDevs: DNS lookup, WHOIS, SSL checker, ping, traceroute, port checker, HTTP headers, and more.',
+}
+
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <main className="min-h-[100dvh] overflow-x-hidden">
+      <div className="pt-24 pb-16 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto">
+
+          {/* Hero */}
+          <div className="mb-14">
+            {/* Brand badge */}
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://strawhatdevs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mb-4 px-3 py-1 rounded-full border border-[#19D7C1]/40 bg-[#19D7C1]/8 text-xs font-medium text-[#19D7C1] hover:bg-[#19D7C1]/15 transition-colors cursor-pointer"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              <img src="/logo-icon.svg" alt="" className="h-4 w-4" aria-hidden />
+              A StrawHatDevs open-source project
+            </a>
+            <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-3">
+              Network Tools
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-[55ch] leading-relaxed">
+              {TOOLS.length} free tools for DNS analysis, security auditing, HTTP inspection, and network diagnostics — built by{' '}
+              <a
+                href="https://strawhatdevs.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#19D7C1] font-medium hover:underline cursor-pointer"
+              >
+                StrawHatDevs
+              </a>
+              .
+            </p>
+          </div>
+
+          {/* Category sections */}
+          {CATEGORY_ORDER.map((category) => {
+            const tools = getToolsByCategory(category)
+            if (tools.length === 0) return null
+            const { label, description } = CATEGORIES[category]
+
+            return (
+              <section key={category} className="mb-12">
+                {/* Section header */}
+                <div className="flex items-baseline gap-3 mb-5">
+                  <h2 className="font-semibold text-base text-foreground tracking-tight">
+                    {label}
+                  </h2>
+                  <span className="text-sm text-muted-foreground">{description}</span>
+                </div>
+
+                {/* Tool cards grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                  {tools.map((tool) => (
+                    <ToolCard key={tool.slug} tool={tool} />
+                  ))}
+                </div>
+              </section>
+            )
+          })}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+      </div>
+    </main>
+  )
 }
