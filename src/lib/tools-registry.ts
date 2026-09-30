@@ -1,7 +1,17 @@
 import {
   Search, RotateCcw, FileText, Mail, Globe, ShieldCheck, Key, Lock,
   Activity, MapPin, Wifi, Server, Radio, Link, AlignJustify, Shield,
-  Calculator, Network, Building2, ArrowRightLeft
+  Calculator, Network, Building2, ArrowRightLeft,
+  // Encoding & Decoding
+  Binary, Braces, Fingerprint, Code, KeyRound,
+  // Text Utilities
+  Type, Hash, GitCompare, Regex, AlignLeft,
+  // Color
+  Palette, Contrast,
+  // Time & Date
+  Timer, CalendarClock, Globe2,
+  // Formatters
+  FileJson,
 } from 'lucide-react'
 import { type LucideIcon } from 'lucide-react'
 
@@ -12,6 +22,11 @@ export type ToolCategory =
   | 'security'
   | 'calculators'
   | 'discovery'
+  | 'encoding'
+  | 'text'
+  | 'color'
+  | 'time'
+  | 'formatters'
 
 export interface ToolDefinition {
   slug: string
@@ -33,6 +48,11 @@ export const CATEGORIES: Record<ToolCategory, { label: string; description: stri
   'security': { label: 'Security', description: 'Audit SSL certificates and domain security posture' },
   'calculators': { label: 'Calculators', description: 'Calculate CIDR ranges and subnet configurations' },
   'discovery': { label: 'Discovery', description: 'Understand your own network infrastructure' },
+  'encoding': { label: 'Encoding & Decoding', description: 'Encode, decode, and generate secrets, Base64, JWT, URL, and more' },
+  'text': { label: 'Text Utilities', description: 'Hash, diff, count, generate, and test text with regex' },
+  'color': { label: 'Color Tools', description: 'Convert color formats and check WCAG contrast ratios' },
+  'time': { label: 'Time & Date', description: 'Convert timestamps, parse cron expressions, and translate time zones' },
+  'formatters': { label: 'Formatters', description: 'Prettify, minify, and validate structured data' },
 }
 
 export const TOOLS: ToolDefinition[] = [
@@ -276,6 +296,197 @@ export const TOOLS: ToolDefinition[] = [
   },
 ]
 
+// ─── 16 New Client-Side Tools ──────────────────────────────────────────────
+
+const NEW_TOOLS: ToolDefinition[] = [
+  // --- Encoding & Decoding ---
+  {
+    slug: 'base64',
+    name: 'Base64 Encoder / Decoder',
+    description: 'Encode text or binary data to Base64, or decode Base64 strings back to plain text',
+    category: 'encoding',
+    icon: Binary,
+    accentColor: 'text-violet-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  {
+    slug: 'url-encoder',
+    name: 'URL Encoder / Decoder',
+    description: 'Encode special characters in URLs and query strings, or decode percent-encoded URIs',
+    category: 'encoding',
+    icon: Link,
+    accentColor: 'text-blue-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  {
+    slug: 'jwt-decoder',
+    name: 'JWT Decoder',
+    description: 'Decode and inspect JWT header, payload, claims, and expiry — no secret required',
+    category: 'encoding',
+    icon: Braces,
+    accentColor: 'text-amber-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+    badge: 'Client-side',
+  },
+  {
+    slug: 'html-entities',
+    name: 'HTML Entity Encoder',
+    description: 'Encode HTML special characters (&, <, >, ", \') to entities or decode them back',
+    category: 'encoding',
+    icon: Code,
+    accentColor: 'text-orange-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  {
+    slug: 'secret-generator',
+    name: 'Secret Generator',
+    description: 'Generate cryptographically secure secrets — API keys, passwords, UUIDs, hex tokens, and JWT secrets',
+    category: 'encoding',
+    icon: KeyRound,
+    accentColor: 'text-teal-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+    badge: 'Secure',
+  },
+  // --- Text Utilities ---
+  {
+    slug: 'hash-generator',
+    name: 'Hash Generator',
+    description: 'Compute MD5, SHA-1, SHA-256, and SHA-512 hashes of any text string',
+    category: 'text',
+    icon: Hash,
+    accentColor: 'text-indigo-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  {
+    slug: 'lorem-ipsum',
+    name: 'Lorem Ipsum Generator',
+    description: 'Generate placeholder text by paragraphs, sentences, or word count',
+    category: 'text',
+    icon: Type,
+    accentColor: 'text-pink-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  {
+    slug: 'text-diff',
+    name: 'Text Diff Viewer',
+    description: 'Side-by-side diff of two text blocks with added, removed, and unchanged line highlighting',
+    category: 'text',
+    icon: GitCompare,
+    accentColor: 'text-emerald-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  {
+    slug: 'regex-tester',
+    name: 'Regex Tester',
+    description: 'Test regular expressions against sample text with real-time match highlighting and group capture',
+    category: 'text',
+    icon: Regex,
+    accentColor: 'text-red-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  {
+    slug: 'word-counter',
+    name: 'Word & Char Counter',
+    description: 'Count words, characters, sentences, paragraphs, and estimated reading time',
+    category: 'text',
+    icon: AlignLeft,
+    accentColor: 'text-sky-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  // --- Color Tools ---
+  {
+    slug: 'color-converter',
+    name: 'Color Converter',
+    description: 'Convert colors between HEX, RGB, HSL, HSV, and CMYK formats with a live preview',
+    category: 'color',
+    icon: Palette,
+    accentColor: 'text-purple-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  {
+    slug: 'contrast-checker',
+    name: 'Contrast Checker',
+    description: 'Check WCAG AA and AAA contrast ratios between text and background colors',
+    category: 'color',
+    icon: Contrast,
+    accentColor: 'text-fuchsia-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  // --- Time & Date ---
+  {
+    slug: 'unix-timestamp',
+    name: 'Unix Timestamp',
+    description: 'Convert Unix timestamps to human-readable dates and vice versa across any timezone',
+    category: 'time',
+    icon: Timer,
+    accentColor: 'text-cyan-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  {
+    slug: 'cron-parser',
+    name: 'Cron Expression Parser',
+    description: 'Parse and explain cron expressions in plain English with the next 5 scheduled run times',
+    category: 'time',
+    icon: CalendarClock,
+    accentColor: 'text-lime-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  {
+    slug: 'timezone-converter',
+    name: 'Timezone Converter',
+    description: 'Convert a date and time across multiple global time zones simultaneously',
+    category: 'time',
+    icon: Globe2,
+    accentColor: 'text-blue-400',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+  // --- Formatters ---
+  {
+    slug: 'json-formatter',
+    name: 'JSON Formatter',
+    description: 'Prettify, minify, and validate JSON with syntax highlighting and error detection',
+    category: 'formatters',
+    icon: FileJson,
+    accentColor: 'text-yellow-500',
+    inputType: 'custom',
+    inputPlaceholder: '',
+    apiEndpoint: '',
+  },
+]
+
+// Merge all tools
+;(TOOLS as ToolDefinition[]).push(...NEW_TOOLS)
+
 export function getToolBySlug(slug: string): ToolDefinition | undefined {
   return TOOLS.find((t) => t.slug === slug)
 }
@@ -285,5 +496,6 @@ export function getToolsByCategory(category: ToolCategory): ToolDefinition[] {
 }
 
 export const CATEGORY_ORDER: ToolCategory[] = [
-  'dns-domain', 'network', 'http-web', 'security', 'calculators', 'discovery'
+  'dns-domain', 'network', 'http-web', 'security', 'calculators', 'discovery',
+  'encoding', 'text', 'color', 'time', 'formatters',
 ]
