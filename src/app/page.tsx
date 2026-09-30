@@ -4,8 +4,8 @@ import { Search } from 'lucide-react'
 
 
 export const metadata = {
-  title: 'Network Tools by StrawHatDevs — DNS, Security & HTTP Diagnostics',
-  description: '22+ free network diagnostic tools by StrawHatDevs: DNS lookup, WHOIS, SSL checker, ping, traceroute, port checker, HTTP headers, and more.',
+  title: 'DevTools by StrawHatDevs — Developer Utilities for Every Workflow',
+  description: '37+ free developer tools by StrawHatDevs: DNS lookup, Base64, JWT decoder, JSON formatter, color converter, secret generator, and much more.',
 }
 
 export default function HomePage() {
@@ -27,10 +27,10 @@ export default function HomePage() {
               A StrawHatDevs open-source project
             </a>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-foreground mb-3">
-              Network Tools
+              Dev Tools
             </h1>
             <p className="text-lg text-muted-foreground max-w-[55ch] leading-relaxed">
-              {TOOLS.length} free tools for DNS analysis, security auditing, HTTP inspection, and network diagnostics — built by{' '}
+              {TOOLS.length} free tools for developers — encoding, networking, color, formatting, and more — built by{' '}
               <a
                 href="https://strawhatdevs.com"
                 target="_blank"

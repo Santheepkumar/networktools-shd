@@ -47,7 +47,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           {/* Network Tools label */}
           <span className="hidden sm:block text-xs font-medium text-muted-foreground px-2.5 py-1 rounded-full border border-border">
-            Network Tools
+            Dev Tools
           </span>
 
           {mounted && (

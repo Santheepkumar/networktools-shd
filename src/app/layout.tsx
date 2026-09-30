@@ -7,26 +7,26 @@ import { Toaster } from '@/components/ui/sonner'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Network Tools by StrawHatDevs',
-    template: '%s — Network Tools by StrawHatDevs',
+    default: 'DevTools by StrawHatDevs',
+    template: '%s — DevTools by StrawHatDevs',
   },
   description:
-    'Free network diagnostic tools by StrawHatDevs — DNS lookup, WHOIS, SSL checker, ping, traceroute, port checker, HTTP headers, and more. Built for developers.',
-  keywords: ['dns lookup', 'whois', 'ssl checker', 'ping', 'traceroute', 'port checker', 'network tools', 'strawhatdevs'],
+    'Free developer tools by StrawHatDevs — DNS lookup, WHOIS, SSL checker, Base64, JWT decoder, JSON formatter, color converter, secret generator, and more.',
+  keywords: ['developer tools', 'devtools', 'dns lookup', 'whois', 'ssl checker', 'base64', 'jwt decoder', 'json formatter', 'color converter', 'secret generator', 'strawhatdevs'],
   authors: [{ name: 'StrawHatDevs', url: 'https://strawhatdevs.com' }],
   creator: 'StrawHatDevs',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Network Tools by StrawHatDevs',
-    title: 'Network Tools by StrawHatDevs',
-    description: '22+ free network diagnostic tools for developers — DNS, WHOIS, SSL, HTTP, security audits and more.',
-    images: [{ url: '/StrawHatDevs-Brand-Kit/02-PNG-Exports/primary-horizontal-dark-bg-3200.jpg', width: 3200, height: 1800, alt: 'StrawHatDevs Network Tools' }],
+    siteName: 'DevTools by StrawHatDevs',
+    title: 'DevTools by StrawHatDevs',
+    description: '37+ free developer tools — DNS, networking, encoding, color, JSON, time utilities and more.',
+    images: [{ url: '/StrawHatDevs-Brand-Kit/02-PNG-Exports/primary-horizontal-dark-bg-3200.jpg', width: 3200, height: 1800, alt: 'DevTools by StrawHatDevs' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Network Tools by StrawHatDevs',
-    description: '22+ free network diagnostic tools for developers.',
+    title: 'DevTools by StrawHatDevs',
+    description: '37+ free developer tools for every workflow.',
     creator: '@strawhatdevs',
   },
   icons: {
